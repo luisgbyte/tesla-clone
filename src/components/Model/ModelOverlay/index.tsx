@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
+import useWrapperScroll from "../useWrapperScroll";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 const ModelOverlay: React.FC = ({ children }) => {
-  return (
-    <Container>
-      {children}
-    </Container>
-  );
-}
+  const { scrollY } = useWrapperScroll();
+
+  return <Container>{children}</Container>;
+};
 
 export default ModelOverlay;
