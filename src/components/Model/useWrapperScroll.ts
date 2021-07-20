@@ -10,7 +10,7 @@ export default function useWrapperScroll() {
     const scrollYProgress = useMotionValue(0);
 
     useEffect(() => {
-        const element = wrapperRef.current
+        const element = wrapperRef.current;
 
         if (element) {
             const updateScrollValue = () => {
