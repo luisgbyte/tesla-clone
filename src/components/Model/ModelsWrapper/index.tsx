@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useCallback, useRef, useState } from "react";
 
-import { Container } from './styles';
+import ModelsContex, { CarModel } from "../ModelsContex";
+
+import { Container } from "./styles";
 
 const ModelsWrapper: React.FC = ({ children }) => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  const [registeredModels, setRegisteredModels] = useState<CarModel[]>([]);
+
+  const registerModel = useCallback((model: CarModel) => {
+    setRegisteredModels((state) => [...state, model]);
+  }, []);
+
+  const unregisterModel = useCallback((modelName: string) => {
+    setRegisteredModels((state) =>
+      state.filter((model) => model.modelName !== modelName)
+    );
+  }, []);
+
+  const getModelByName = useCallback((modelName: string) => {
     return (
-        <Container>
-            {children}
-        </Container>
-    )
-}
+      registeredModels.find((item) => item.modelName === modelName) || null
+    );
+  }, [registeredModels]);
+
+  return (
+    <ModelsContex.Provider value={{
+        wrapperRef,
+        registeredModels,
+        registerModel,
+        unregisterModel,
+        getModelByName
+    }}>
+      <Container ref={wrapperRef}>{children}</Container>
+    </ModelsContex.Provider>
+  );
+};
 
 export default ModelsWrapper;
