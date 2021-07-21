@@ -10,31 +10,31 @@ import accessories from "../../assets/img/accessories.jpeg";
 
 export const Container = styled.div`
   .colored:nth-child(1) {
-    background: lightblue url(${modelS}) no-repeat center;
+    background: url(${modelS}) no-repeat center;
     background-size: cover;
   }
   .colored:nth-child(2) {
-    background: lightblue url(${modelY}) no-repeat center;
+    background: url(${modelY}) no-repeat center;
     background-size: cover;
   }
   .colored:nth-child(3) {
-    background: lightblue url(${model3}) no-repeat center;
+    background: url(${model3}) no-repeat center;
     background-size: cover;
   }
   .colored:nth-child(4) {
-    background: lightblue url(${modelX}) no-repeat center;
+    background: url(${modelX}) no-repeat center;
     background-size: cover;
   }
   .colored:nth-child(5) {
-    background: lightblue url(${solarPanels}) no-repeat center;
+    background: url(${solarPanels}) no-repeat center;
     background-size: cover;
   }
   .colored:nth-child(6) {
-    background: lightblue url(${solarRoof}) no-repeat center;
+    background: url(${solarRoof}) no-repeat center;
     background-size: cover;
   }
   .colored:nth-child(7) {
-    background: lightblue url(${accessories}) no-repeat center;
+    background: url(${accessories}) no-repeat center;
     background-size: cover;
   }
 `;
