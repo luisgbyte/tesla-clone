@@ -18,7 +18,7 @@ const UniqueOverlay: React.FC = () => {
       <Footer style={{ opacity }}>
         <ul>
           <li>
-            <a href="#">UI Clone</a>
+            <p>UI Clone</p>
           </li>
         </ul>
       </Footer>

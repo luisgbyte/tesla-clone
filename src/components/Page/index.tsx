@@ -9,13 +9,13 @@ const Page: React.FC = () => {
         <ModelsWrapper>
           <div>
             {[
-              "Model One",
-              "Model Two",
-              "Model Three",
-              "Model Four",
-              "Model Five",
-              "Model Six",
-              "Model Seven",
+              "Model S",
+              "Model Y",
+              "Model 3",
+              "Model X",
+              "Solar Panels",
+              "Solar Roofs",
+              "Accessories",
             ].map((modelName) => (
               <ModelsSection
                 key={modelName}
@@ -31,9 +31,9 @@ const Page: React.FC = () => {
             ))}
           </div>
 
-          <Spacer/>
+          <Spacer />
 
-          <UniqueOverlay/>
+          <UniqueOverlay />
         </ModelsWrapper>
       </Container>
     );
